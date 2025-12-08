@@ -13,11 +13,12 @@ HTML + Bootstrap 5 para diseño
 GitHub para versionamiento y despliegue del repositorio
 
 Funcionalidad del CRUD
-✔ Listar platos
+
+Listar platos
 
 Muestra todos los platos registrados.
 
-✔ Crear un nuevo plato
+Crear un nuevo plato
 
 Formulario con:
 
@@ -27,13 +28,13 @@ Precio
 
 Descripción
 
-✔ Eliminar plato
+Eliminar plato
 
 Permite borrar un plato por ID.
 
 Este CRUD representa el módulo de gestión de platos para FoodPlease, simulando cómo los locales gestionan su menú.
 
-▶ Ejecutar el proyecto en entorno local
+Ejecutar el proyecto en entorno local
 
 Instalar dependencias
 
@@ -58,7 +59,7 @@ Crear: http://127.0.0.1:8000/platos/crear/
 
 Admin (opcional): http://127.0.0.1:8000/admin/
 
-🧩 Modelo Plato
+Modelo Plato
 class Plato(models.Model):
 nombre = models.CharField(max_length=100) 
 precio = models.IntegerField() 
