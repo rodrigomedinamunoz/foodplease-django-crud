@@ -1,0 +1,39 @@
+<h1>Listado de Platos</h1>
+<a href="/platos/crear/">Ingresar nuevo plato</a>
+<hr>
+
+<ul>
+    {% for plato in platos %}
+        <li>
+            {{ plato.nombre }} - ${{ plato.precio }}
+            <a href="/platos/eliminar/{{ plato.id }}/">Eliminar</a>
+        </li>
+    {% endfor %}
+</ul>
+
+<hr>
+
+<h2>Tabla de Platos</h2>
+
+<table border="1" cellpadding="8" cellspacing="0">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nombre del Plato</th>
+            <th>Precio</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for plato in platos %}
+        <tr>
+            <td>{{ plato.id }}</td>
+            <td>{{ plato.nombre }}</td>
+            <td>${{ plato.precio }}</td>
+            <td>
+                <a href="/platos/eliminar/{{ plato.id }}/">Eliminar</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>

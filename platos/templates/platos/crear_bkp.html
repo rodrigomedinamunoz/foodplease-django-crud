@@ -1,0 +1,15 @@
+<h1>Ingresar nuevo plato</h1>
+
+<form method="POST">
+    {% csrf_token %}
+    <label>Nombre:</label><br>
+    <input type="text" name="nombre"><br><br>
+
+    <label>Precio:</label><br>
+    <input type="number" name="precio"><br><br>
+
+    <label>Descripción:</label><br>
+    <textarea name="descripcion"></textarea><br><br>
+
+    <button type="submit">Guardar</button>
+</form>

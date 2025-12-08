@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1 class="mb-4">Crear Plato</h1>
+
+<form method="POST" class="card p-4 shadow-sm">
+    {% csrf_token %}
+    
+    <div class="mb-3">
+        <label class="form-label">Nombre del plato</label>
+        <input type="text" name="nombre" class="form-control" required>
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Precio</label>
+        <input type="number" name="precio" class="form-control" required>
+    </div>
+	
+	<div class="mb-3">
+    <label class="form-label">Descripción</label>
+    <textarea name="descripcion" class="form-control" placeholder="Descripción del plato (opcional)"></textarea>
+	</div>
+
+    <button type="submit" class="btn btn-success">Guardar</button>
+
+    <a href="/platos/" class="btn btn-secondary ms-2">Volver</a>
+</form>
+
+{% endblock %}
