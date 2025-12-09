@@ -1,5 +1,9 @@
+from pathlib import Path
 import os
 import dj_database_url
+
+# Build paths inside the project like this: BASE_DIR / 'subdir'.
+BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECRET_KEY - usar variable de entorno en producción
 SECRET_KEY = os.environ.get('SECRET_KEY', 'django-insecure-tu-key-actual')
@@ -28,3 +32,5 @@ MIDDLEWARE = [
     'whitenoise.middleware.WhiteNoiseMiddleware',  # <-- AGREGAR ESTA LÍNEA
     # ... resto del middleware
 ]
+
+
