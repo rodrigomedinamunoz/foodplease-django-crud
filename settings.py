@@ -13,6 +13,12 @@ DEBUG = os.environ.get('DEBUG', 'True') == 'True'
 
 ALLOWED_HOSTS = ['*']
 
+# CSRF Settings
+CSRF_TRUSTED_ORIGINS = [
+    'https://web-production-dc55.up.railway.app',
+    'https://*.railway.app',
+]
+
 # Application definition
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -91,3 +97,4 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # Default primary key field type
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
