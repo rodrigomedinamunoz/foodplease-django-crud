@@ -27,8 +27,14 @@ jobs:
         run: |
           python manage.py collectstatic --noinput || true
 
+      - name: Azure Login
+        uses: azure/login@v1
+        with:
+          creds: ${{ secrets.AZUREAPP_SERVICE_PUBLISHPROFILE }}
+
       - name: Zip artifact for deployment
-        run: zip -r release.zip . -x "*.git*"
+        run: |
+          zip -r release.zip . -x "*.git*"
 
       - name: Deploy to Azure Web App
         uses: azure/webapps-deploy@v2
